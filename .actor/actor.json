@@ -5,7 +5,6 @@
     "description": "Scrape reviews from Apple App Store and Google Play Store. Search by keyword or provide app IDs directly. Extracts ratings, review text, author, version, and date.",
     "version": "0.0",
     "buildTag": "latest",
-    "environmentVariables": [],
     "dockerfile": "./Dockerfile",
     "input": "./input_schema.json",
     "storages": {
