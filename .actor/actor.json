@@ -1,0 +1,39 @@
+{
+    "actorSpecification": 1,
+    "name": "appstore-reviews-scraper",
+    "title": "App Store & Google Play Reviews Scraper",
+    "description": "Scrape reviews from Apple App Store and Google Play Store. Search by keyword or provide app IDs directly. Extracts ratings, review text, author, version, and date.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "environmentVariables": [],
+    "dockerfile": "./Dockerfile",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "fields": {},
+            "views": {
+                "overview": {
+                    "title": "App reviews",
+                    "transformation": {
+                        "fields": ["store", "appName", "rating", "title", "text", "author", "version", "date", "url"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "store": {"label": "Store", "format": "text"},
+                            "appName": {"label": "App", "format": "text"},
+                            "rating": {"label": "Rating", "format": "number"},
+                            "title": {"label": "Title", "format": "text"},
+                            "text": {"label": "Review", "format": "text"},
+                            "author": {"label": "Author", "format": "text"},
+                            "version": {"label": "Version", "format": "text"},
+                            "date": {"label": "Date", "format": "date"},
+                            "url": {"label": "Link", "format": "link"}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

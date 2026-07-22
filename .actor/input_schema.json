@@ -1,0 +1,49 @@
+{
+    "title": "App Store Reviews Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchTerms": {
+            "title": "Search terms (Apple App Store)",
+            "type": "array",
+            "description": "App names or keywords to search on the Apple App Store (e.g. 'spotify', 'notion'). Returns the top 3 matching apps and scrapes their reviews.",
+            "editor": "stringList",
+            "prefill": ["spotify"]
+        },
+        "appleAppIds": {
+            "title": "Apple App Store IDs",
+            "type": "array",
+            "description": "Numeric App Store IDs for specific apps (e.g. '324684580' for Spotify). Find the ID in the App Store URL: apps.apple.com/us/app/name/id324684580",
+            "editor": "stringList"
+        },
+        "googlePlayIds": {
+            "title": "Google Play package names",
+            "type": "array",
+            "description": "Google Play package names for specific apps (e.g. 'com.spotify.music'). Find it in the Play Store URL: play.google.com/store/apps/details?id=com.spotify.music",
+            "editor": "stringList"
+        },
+        "country": {
+            "title": "Country",
+            "type": "string",
+            "description": "Two-letter country code (e.g. 'us', 'gb', 'de', 'au'). Determines which store region to scrape reviews from.",
+            "editor": "textfield",
+            "default": "us"
+        },
+        "maxReviewsPerApp": {
+            "title": "Max reviews per app",
+            "type": "integer",
+            "description": "Maximum number of reviews to collect per app. Apple App Store supports up to 500 reviews. Google Play supports up to 500 per run.",
+            "default": 100,
+            "minimum": 1,
+            "maximum": 500
+        },
+        "sortBy": {
+            "title": "Sort reviews by",
+            "type": "string",
+            "description": "How to sort the reviews returned.",
+            "enum": ["newest", "helpful"],
+            "enumTitles": ["Newest first", "Most helpful first"],
+            "default": "newest"
+        }
+    }
+}
