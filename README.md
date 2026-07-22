@@ -106,3 +106,15 @@ Go to the app's App Store page and look at the URL: `apps.apple.com/us/app/name/
 
 **Does this require a proxy?**
 No. Both stores are accessed without proxies or authentication.
+
+---
+
+## More from dbott23
+
+| Actor | What it does |
+|---|---|
+| [Trustpilot Reviews Scraper](https://apify.com/dbott23/trustpilot-reviews-scraper) | Export Trustpilot reviews to CSV or JSON — no API key needed |
+| [B2B Reviews Scraper](https://apify.com/dbott23/b2b-reviews-scraper) | Pull reviews from G2, Capterra, and Trustpilot in one run |
+| [Bluesky Posts Scraper](https://apify.com/dbott23/bluesky-posts-scraper) | Search and export Bluesky posts by keyword or user profile |
+| [AI Brand Visibility Tracker](https://apify.com/dbott23/ai-brand-visibility-tracker) | Track how AI assistants mention your brand vs. competitors |
+| [AI Citation Auditor](https://apify.com/dbott23/ai-citation-auditor) | Check if your website is cited by ChatGPT, Perplexity, and Gemini |
